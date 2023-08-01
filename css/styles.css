@@ -14,7 +14,6 @@ li {
   height: 60px;
   width: 100%;
   background-color: white;
-  display: flex;
 }
 
 #title {
@@ -43,9 +42,12 @@ li {
   padding: 4px;
 }
 
-.logo { 
+.logo {
   cursor: pointer;
-  max-height: 60px;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .menu_btn {
