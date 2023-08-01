@@ -145,6 +145,9 @@ li {
   background: #333333;
   padding: 4px;
 }
+.white {
+  background-color: white;
+}
 
 @media screen and (max-width: 500px) {
   #title_description {
@@ -184,6 +187,6 @@ li {
     margin-bottom: 3.5px;
   }
   #header1 {
-  padding: 5px 10px;
+    padding: 5px 10px;
   }
 }
