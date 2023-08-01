@@ -9,11 +9,20 @@
 li {
   list-style: none;
 }
-
 #header {
-  height: 60px;
-  width: 100%;
+  display: flex;
+}
+
+#header1,
+#header2,
+#header3 {
+  display: flex;
+  width: calc(100% / 3);
   background-color: white;
+}
+
+#header3 {
+  justify-content: flex-end;
 }
 
 #title {
@@ -37,34 +46,27 @@ li {
   color: white;
 }
 
-.footer_text {
-  background: #333333;
-  padding: 4px;
-}
-
-.logo {
-  cursor: pointer;
-  height: 40px;
-  background-color: white;
+#logo {
   display: flex;
-  justify-content: center;
+  cursor: pointer;
+  height: 44px;
+  padding: 8px;
+  background-color: white;
 }
 
 .menu_btn {
-  margin-left: 92%;
-  margin-right: 1.5%;
-  margin-top: 10px;
-  float: right;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 5px 15px;
+  display: flex;
   cursor: pointer;
   background-color: white;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .line {
-  margin-top: 7px;
-  margin-bottom: 7px;
-  width: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 30px;
   height: 4px;
   border-radius: 7px;
   background-color: #333333;
@@ -101,9 +103,9 @@ li {
 }
 
 .image_main {
+  margin-top: 20px;
   height: 200px;
   width: 300px;
-  border-radius: 15px;
 }
 
 .serivce_name {
@@ -133,9 +135,55 @@ li {
   margin-right: 25%;
   width: 50%;
   height: 35px;
-  text-align: center;
   font-weight: bold;
   border-radius: 6px;
   background: #fa9746;
   color: white;
+}
+
+.footer_text {
+  background: #333333;
+  padding: 4px;
+}
+
+@media screen and (max-width: 500px) {
+  #title_description {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  #footer {
+    margin-top: 40px;
+  }
+  #header1 {
+    order: 2;
+    justify-content: center;
+  }
+  #header2 {
+    order: 1;
+  }
+  #header3 {
+    order: 3;
+  }
+
+  .line {
+    margin-top: 3.5px;
+    margin-bottom: 3.5px;
+  }
+
+  .flex_container li {
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) and (max-height: 500px) {
+  #footer {
+    margin-top: 25px;
+  }
+  .line {
+    margin-top: 3.5px;
+    margin-bottom: 3.5px;
+  }
+  #header1 {
+  padding: 5px 10px;
+  }
 }
