@@ -85,7 +85,6 @@ li {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .flex_container li {
@@ -99,7 +98,7 @@ li {
 .card {
   background-color: white;
   border-radius: 5%;
-} 
+}
 
 .image_main {
   margin-top: 20px;
@@ -126,7 +125,7 @@ li {
 
 .serivce_description {
   color: black;
-  background-color: white; 
+  background-color: white;
 }
 
 .button {
@@ -149,6 +148,13 @@ li {
 }
 .white {
   background-color: white;
+}
+
+.inovations .flex_container li {
+  flex-basis: 28%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 500px) {
