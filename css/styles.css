@@ -64,8 +64,8 @@ li {
 }
 
 .line {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   width: 30px;
   height: 4px;
   border-radius: 7px;
@@ -83,14 +83,13 @@ li {
 
 .flex_container {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  justify-content: center; 
   flex-wrap: wrap;
   position: relative;
 }
 
 .flex_container li {
-  flex-basis: 20%;
+  flex-basis: 22%;
   border-radius: 5px;
   padding: 35px;
   background-color: transparent;
@@ -106,30 +105,33 @@ li {
   margin-top: 20px;
   height: 200px;
   width: 300px;
+  border-radius: 7px;
+  background-color: white;
 }
 
 .serivce_name {
+  margin-top: 20px;
   color: #5595e8;
   background-color: white;
   text-align: center;
 }
 
 .serivce_description_container {
-  height: 70px;
-  padding: 5%;
+  padding: 10% 6%;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .serivce_description {
   color: black;
   background-color: white;
-  margin-top: 15px;
 }
 
 .button {
   border: none;
   cursor: pointer;
-  margin-top: 30px;
   margin-bottom: 25px;
   margin-left: 25%;
   margin-right: 25%;
@@ -145,7 +147,10 @@ li {
   background: #333333;
   padding: 4px;
 }
-
+.white {
+  background-color: white;
+}
+ 
 @media screen and (max-width: 500px) {
   #title_description {
     margin-left: 12%;
@@ -184,6 +189,6 @@ li {
     margin-bottom: 3.5px;
   }
   #header1 {
-  padding: 5px 10px;
+    padding: 5px 10px;
   }
 }
