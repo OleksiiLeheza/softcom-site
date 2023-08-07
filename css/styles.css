@@ -21,6 +21,10 @@ li {
   background-color: white;
 }
 
+#header2 {
+  justify-content: center;
+}
+
 #header3 {
   justify-content: flex-end;
 }
@@ -52,9 +56,9 @@ li {
   height: 44px;
   padding: 8px;
   background-color: white;
-}
+} 
 
-.menu_btn {
+.nav {
   padding: 5px 15px;
   display: flex;
   cursor: pointer;
@@ -63,10 +67,24 @@ li {
   justify-content: center;
 }
 
+.one {
+  width: 30px;
+}
+.two {
+  width: 20px;
+}
+.three {
+  width: 25px;
+}
+
+.nav:hover div {
+  width: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
 .line {
   margin-top: 4px;
   margin-bottom: 4px;
-  width: 30px;
   height: 4px;
   border-radius: 7px;
   background-color: #333333;
@@ -142,6 +160,10 @@ li {
   color: white;
 }
 
+.button:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
 .footer_text {
   background: #333333;
   padding: 4px;
@@ -164,16 +186,6 @@ li {
   }
   #footer {
     margin-top: 40px;
-  }
-  #header1 {
-    order: 2;
-    justify-content: center;
-  }
-  #header2 {
-    order: 1;
-  }
-  #header3 {
-    order: 3;
   }
 
   .line {
