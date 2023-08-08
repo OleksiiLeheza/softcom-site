@@ -41,8 +41,6 @@ li {
 
 #title {
   margin-top: 20px;
-  display: flex;
-  justify-content: center;
   color: #5595e8;
   font-size: large;
 }
@@ -84,23 +82,19 @@ li {
 }
 
 .dropdown_menu {
-  display: none;
-  position: absolute;
+  display: none; 
   font-weight: bolder;
   left: 0;
-  top: 60px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: height 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.active {
+.dropdown_menu.active { 
   display: flex;
   flex-direction: column;
-  background-color: white;
   color: #5595e8;
 }
 
@@ -115,11 +109,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.menu_links:hover {
-  background-color: rgba(250, 151, 70, 0.1);
-  border-radius: 7px;
 }
 
 .one {
@@ -164,7 +153,7 @@ li {
 }
 
 .flex_container li {
-  flex-basis: 20%;
+  flex-basis: 21%;
   border-radius: 5px;
   padding: 35px;
   background-color: transparent;
