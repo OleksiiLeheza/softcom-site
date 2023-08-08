@@ -6,6 +6,16 @@
   text-align: center;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 li {
   list-style: none;
 }
@@ -21,14 +31,20 @@ li {
   background-color: white;
 }
 
+#header2 {
+  justify-content: center;
+}
+
 #header3 {
   justify-content: flex-end;
 }
 
 #title {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   color: #5595e8;
   font-size: large;
-  margin-top: 4%;
 }
 
 #title_description {
@@ -54,7 +70,7 @@ li {
   background-color: white;
 }
 
-.menu_btn {
+.nav {
   padding: 5px 15px;
   display: flex;
   cursor: pointer;
@@ -63,10 +79,67 @@ li {
   justify-content: center;
 }
 
-.line {
-  margin-top: 4px;
-  margin-bottom: 4px;
+.nav #menuButton {
+  background-color: white;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  font-weight: bolder;
+  left: 0;
+  top: 60px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.active {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #5595e8;
+}
+
+.dropdown_menu.active .active {
+  background-color: white;
+  color: #fa9746;
+}
+
+.menu_links {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu_links:hover {
+  background-color: rgba(250, 151, 70, 0.1);
+  border-radius: 7px;
+}
+
+.one {
   width: 30px;
+}
+.two {
+  width: 20px;
+}
+.three {
+  width: 25px;
+}
+
+.nav:hover div {
+  width: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.line {
+  margin-top: 7px;
+  margin-bottom: 7px;
   height: 4px;
   border-radius: 7px;
   background-color: #333333;
@@ -80,6 +153,9 @@ li {
   position: absolute;
   z-index: 1;
 }
+.card_link {
+  background-color: white;
+}
 
 .flex_container {
   display: flex;
@@ -88,7 +164,7 @@ li {
 }
 
 .flex_container li {
-  flex-basis: 22%;
+  flex-basis: 20%;
   border-radius: 5px;
   padding: 35px;
   background-color: transparent;
@@ -98,6 +174,10 @@ li {
 .card {
   background-color: white;
   border-radius: 5%;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
 }
 
 .image_main {
@@ -129,8 +209,6 @@ li {
 }
 
 .button {
-  border: none;
-  cursor: pointer;
   margin-bottom: 25px;
   margin-left: 25%;
   margin-right: 25%;
@@ -142,6 +220,11 @@ li {
   color: white;
 }
 
+.button:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
 .footer_text {
   background: #333333;
   padding: 4px;
@@ -151,7 +234,7 @@ li {
 }
 
 .inovations .flex_container li {
-  flex-basis: 28%;
+  flex-basis: 25%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -165,24 +248,18 @@ li {
   #footer {
     margin-top: 40px;
   }
-  #header1 {
-    order: 2;
-    justify-content: center;
-  }
-  #header2 {
-    order: 1;
-  }
-  #header3 {
-    order: 3;
-  }
-
-  .line {
-    margin-top: 3.5px;
-    margin-bottom: 3.5px;
-  }
 
   .flex_container li {
     padding: 25px;
+  }
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    width: 70%;
+  }
+  .dropdown_menu.active {
+    left: 15%;
   }
 }
 
@@ -190,11 +267,10 @@ li {
   #footer {
     margin-top: 25px;
   }
-  .line {
-    margin-top: 3.5px;
-    margin-bottom: 3.5px;
+  .dropdown_menu.active {
+    width: 60%;
   }
-  #header1 {
-    padding: 5px 10px;
+  .dropdown_menu.active {
+    left: 20%;
   }
 }
