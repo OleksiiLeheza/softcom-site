@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("menuButton");
-  const dropedMenu = document.querySelector(".dropdown_menu");
-  menuButton.addEventListener("mouseenter", useDropdownMenu);
-  dropedMenu.addEventListener("mouseleave", useDropdownMenu);
+  menuButton.addEventListener("click", useDropdownMenu);
 });
-
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menuButton");
-  menuButton.addEventListener("onclick", useDropdownMenu);
+  const dropedMenu = document.querySelector(".dropdown_menu");
+  dropedMenu.addEventListener("click", useDropdownMenu);
 });
 
 function useDropdownMenu() {
