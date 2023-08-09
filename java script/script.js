@@ -12,24 +12,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function useDropdownMenu() {
   const dropdown_menu = document.querySelector(".dropdown_menu");
-  const title = document.getElementById("title");
-  const titleDescription = document.getElementById("title_description");
-  const actives = document.querySelectorAll(".active");
 
   dropdown_menu.classList.toggle("active");
-  title.classList.toggle("active");
-  titleDescription.classList.toggle("active");
   isMenuOpened = dropdown_menu.classList.contains("active") ? true : false;
   adjustBoxPosition(isMenuOpened, calculateDropMenuMarginHeight);
-  if (dropdown_menu.classList.contains("active")) {
-    actives.forEach((active) => {
-      active.classList.add("fadeIn");
-    });
+  if (isMenuOpened) {
+    moveDownAllElements();
   } else {
-    dropdown_menu.classList.add("fadeIn");
-    title.classList.add("moveDown");
-    titleDescription.classList.add("moveDown");
+    moveUpAllElements();
   }
+}
+
+function moveDownAllElements() {
+  const title = document.getElementById("title");
+  const titleDescription = document.getElementById("title_description");
+  const dropMenu = document.querySelector(".dropdown_menu");
+  const allElements = [title, titleDescription, dropMenu];
+
+  allElements.forEach((element) => {
+    if (
+      isElementExist(element) &&
+      element.classList.contains("fadeUpAnimation")
+    ) {
+      element.classList.toggle("fadeUpAnimation");
+    } else if (
+      isElementExist(element) &&
+      element.classList.contains("moveUpAnimation")
+    ) {
+      element.classList.toggle("moveUpAnimation");
+    }
+    if (isElementExist(element)) {
+      element.classList.toggle("fadeInAnimation");
+    }
+  });
+}
+
+function moveUpAllElements() {
+  const title = document.getElementById("title");
+  const titleDescription = document.getElementById("title_description");
+  const dropMenu = document.querySelector(".dropdown_menu");
+  const allElements = [title, titleDescription, dropMenu];
+
+  allElements.forEach((element) => {
+    if (
+      isElementExist(element) &&
+      element.classList.contains("fadeInAnimation")
+    ) {
+      element.classList.toggle("fadeInAnimation");
+    }
+    if (window.location.pathname.includes("index.html")) {
+      if (isElementExist(element)) {
+        element.classList.toggle("fadeUpAnimation");
+      }
+    } else if (isElementExist(element)) {
+      element.classList.toggle("moveUpAnimation");
+    }
+  });
+}
+
+function isElementExist(element) {
+  return element != null && element != undefined ? true : false;
 }
 
 function calculateDropMenuMarginHeight() {

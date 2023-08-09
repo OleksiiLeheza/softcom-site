@@ -47,23 +47,11 @@ li {
   font-size: large;
 }
 
-#title.active {
-  animation: moveDown 0.5s ease-in-out forwards;
-}
-
 #title_description {
   display: flex;
   justify-content: center;
   padding: 20px;
   color: Grey;
-}
-
-#title_description.active {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  color: Grey;
-  animation: moveDown 0.5s ease-in-out forwards;
 }
 
 #footer {
@@ -98,20 +86,18 @@ li {
 .dropdown_menu {
   display: none;
   font-weight: bolder;
-  left: 0;
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 30%;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
+  opacity: 0;
 }
 
 .dropdown_menu.active {
   display: flex;
+  margin-left: 35%;
   flex-direction: column;
   color: #5595e8;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 .dropdown_menu.active .active {
@@ -245,6 +231,20 @@ li {
   flex-wrap: wrap;
 }
 
+.fadeInAnimation {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fadeUpAnimation {
+  opacity: 1;
+  animation: fadeUp 0.5s ease-in-out forwards;
+}
+.moveUpAnimation {
+  opacity: 1;
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -256,15 +256,23 @@ li {
   }
 }
 
-@keyframes moveDown {
+@keyframes fadeUp {
   from {
-    transform: translateY(-100px);
+    transform: translateY(60px);
   }
   to {
     transform: translateY(0);
   }
 }
 
+@keyframes moveUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 500px) {
   #title_description {
@@ -294,8 +302,5 @@ li {
   .dropdown_menu.active {
     width: 60%;
     margin-left: 20%;
-  }
-  .dropdown_menu.active {
-    left: 20%;
   }
 }
