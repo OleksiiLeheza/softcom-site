@@ -40,16 +40,16 @@ li {
 }
 
 #title {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
   color: #5595e8;
   font-size: large;
 }
 
 #title_description {
-  margin-left: 30%;
-  margin-right: 30%;
+  display: flex;
+  justify-content: center;
   padding: 20px;
   color: Grey;
 }
@@ -85,22 +85,18 @@ li {
 
 .dropdown_menu {
   display: none;
-  position: absolute;
   font-weight: bolder;
-  left: 0;
-  top: 60px;
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 30%;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: height 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
 }
 
 .dropdown_menu.active {
   display: flex;
+  margin-left: 35%;
   flex-direction: column;
-  background-color: white;
   color: #5595e8;
 }
 
@@ -115,11 +111,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.menu_links:hover {
-  background-color: rgba(250, 151, 70, 0.1);
-  border-radius: 7px;
 }
 
 .one {
@@ -164,7 +155,7 @@ li {
 }
 
 .flex_container li {
-  flex-basis: 20%;
+  flex-basis: 21%;
   border-radius: 5px;
   padding: 35px;
   background-color: transparent;
@@ -240,6 +231,49 @@ li {
   flex-wrap: wrap;
 }
 
+.fadeInAnimation {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fadeUpAnimation {
+  opacity: 1;
+  animation: fadeUp 0.5s ease-in-out forwards;
+}
+.moveUpAnimation {
+  opacity: 1;
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(60px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 500px) {
   #title_description {
     margin-left: 12%;
@@ -253,13 +287,11 @@ li {
     padding: 25px;
   }
   .dropdown_menu {
-    display: none;
-    position: absolute;
-    top: 60px;
     width: 70%;
+    margin-left: 15%;
   }
   .dropdown_menu.active {
-    left: 15%;
+    justify-content: center;
   }
 }
 
@@ -269,8 +301,6 @@ li {
   }
   .dropdown_menu.active {
     width: 60%;
-  }
-  .dropdown_menu.active {
-    left: 20%;
+    margin-left: 20%;
   }
 }
