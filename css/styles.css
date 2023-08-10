@@ -87,6 +87,7 @@ li {
   display: none;
   font-weight: bolder;
   width: 30%;
+  margin-left: 35%;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
@@ -95,7 +96,6 @@ li {
 
 .dropdown_menu.active {
   display: flex;
-  margin-left: 35%;
   flex-direction: column;
   color: #5595e8;
 }
@@ -286,12 +286,9 @@ li {
   .flex_container li {
     padding: 25px;
   }
-  .dropdown_menu {
+  .dropdown_menu.active {
     width: 70%;
     margin-left: 15%;
-  }
-  .dropdown_menu.active {
-    justify-content: center;
   }
 }
 
